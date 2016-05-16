@@ -9,8 +9,20 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+input {
+    display: table;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 table {
     color: inherit;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 
@@ -102,6 +114,38 @@ table {
         margin-bottom: 0;
     }
     
+    /* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+    
+    tr {margin-bottom: 10px;}
+    tr:last-child {margin-bottom: 0;}
+    
 }
 
 /* TABLETS + */
@@ -123,7 +167,6 @@ table {
     .row:last-child {
         margin-bottom: 0;
     }
-
 }
 
 /* DESKTOPS */
@@ -149,23 +192,25 @@ table {
 
 
 
+/*  ***********************
+    **  UTILITY CLASSES  **
+    ***********************  */
+.txt-center {
+    text-align: center;
+}
+
+.txt-left {
+    text-align: left;
+}
+
+
 /*  *******************
     **  TEMP STYLES  **
     *******************  */
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
 body {
-    padding: 20px;
     font-family: 'Titillium Web', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 10px 0;
-}
-
-input {
-    display: table;
-    margin-bottom: 10px;
 }
 
 .bgGray {
@@ -175,12 +220,4 @@ input {
     color: #444;
     padding: 5px;
     min-height: 30px;
-}
-
-.txt-center {
-    text-align: center;
-}
-
-.txt-left {
-    text-align: left;
 }
