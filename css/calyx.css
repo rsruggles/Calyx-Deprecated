@@ -1,11 +1,23 @@
+/*  *********************
+    **  NORMALIZE CSS  **
+    *********************  */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+table {
+    color: inherit;
+}
+
+
+
 /*  ****************
     **  THE GRID  **
     ****************  */
-
-.row, 
-.col {
-    box-sizing: border-box;
-}
 
 .row:before,
 .row:after {
@@ -25,6 +37,11 @@
 
 .col + .col {
     margin-left: 1.6%;
+}
+
+.col + .col-12 {
+    margin-left: 0;
+    
 }
 
 .col-1 {width: 6.86666666667%;}
@@ -135,20 +152,35 @@
 /*  *******************
     **  TEMP STYLES  **
     *******************  */
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
 body {
     padding: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+input {
+    display: table;
+    margin-bottom: 10px;
 }
 
 .bgGray {
     background: #eee;
     border: 1px solid #ccc;
     border-radius: 5px;
-    color: #777;
+    color: #444;
     padding: 5px;
     min-height: 30px;
 }
 
 .txt-center {
     text-align: center;
+}
+
+.txt-left {
+    text-align: left;
 }
