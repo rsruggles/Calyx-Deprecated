@@ -9,8 +9,19 @@ html {
   box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+input {
+    display: table;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 table {
     color: inherit;
+    font-size: inherit;
 }
 
 
@@ -102,6 +113,15 @@ table {
         margin-bottom: 0;
     }
     
+    thead tr { display: none; }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        margin-right: 5px;
+        text-transform: uppercase;
+    }
+    table td {display: block;}
 }
 
 /* TABLETS + */
@@ -155,17 +175,7 @@ table {
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
 body {
-    padding: 20px;
     font-family: 'Titillium Web', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 10px 0;
-}
-
-input {
-    display: table;
-    margin-bottom: 10px;
 }
 
 .bgGray {
