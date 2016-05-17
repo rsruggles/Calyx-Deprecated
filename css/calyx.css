@@ -13,6 +13,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
 }
 
+<<<<<<< HEAD
+=======
+a {
+	color: #0288D1;
+}
+
+a:hover {
+	color: #0277BD;
+}
+
+>>>>>>> origin/master
 input {
     display: table;
     margin-bottom: 10px;
@@ -22,9 +33,24 @@ input {
 table {
     color: inherit;
     font-size: inherit;
+<<<<<<< HEAD
     font-family: inherit;
+=======
+	width: 100%; 
+	border-collapse: collapse;
+>>>>>>> origin/master
 }
 
+th {
+	text-align: left;
+	padding: 3px 0px 10px 0px;
+}
+
+td {
+	padding: 10px 0px;
+	border-collapse: collapse;
+	border-top:1px solid #ccc;
+}
 
 
 /*  ****************
@@ -114,6 +140,7 @@ table {
         margin-bottom: 0;
     }
     
+<<<<<<< HEAD
     /* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
@@ -146,6 +173,17 @@ table {
     tr {margin-bottom: 10px;}
     tr:last-child {margin-bottom: 0;}
     
+=======
+    thead tr { display: none; }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        margin-right: 5px;
+        text-transform: uppercase;
+    }
+    table td {display: block;}
+>>>>>>> origin/master
 }
 
 /* TABLETS + */
@@ -218,6 +256,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #444;
-    padding: 5px;
+    padding: 10px;
     min-height: 30px;
 }
