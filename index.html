@@ -1,193 +1,224 @@
+
 <html>
 <head>
     <title>Calyx</title>
     <link rel="stylesheet" type="text/css" href="css/calyx.css">
 </head>
 
-    <body>
+<body>
 
-       <!-- THE GRID -->
-        <div class="row">
-            <div class="container txt-center">
-                <div class="col col-12 txt-left">
-                    <h1>The Grid</h1>
-                </div> 
-                <div class="bgGray col col-12">12</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-1">1</div>
-                <div class="bgGray col col-11">11</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-2">2</div>
-                <div class="bgGray col col-10">10</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-3">3</div>
-                <div class="bgGray col col-9">9</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-4">4</div>
-                <div class="bgGray col col-8">8</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-5">5</div>
-                <div class="bgGray col col-7">7</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container txt-center">
-                <div class="bgGray col col-6">6</div>
-                <div class="bgGray col col-6">6</div>
-            </div>
-        </div>
-        
-        <br><br>
-        
-        <!-- TYPOGRAPHY -->
-        <div class="row">
-            <div class="container">
-                <div class="col col-12">
-                    <h1>Typography</h1>
-                </div> 
-                <div class="bgGray col col-12">
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h5>Heading 6</h5>
-                    <p>Paragraph Text
-                       <br>
-                       Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
-                    </p>
-                    <p><strong>Bold Text
-                       <br>
-                       Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
-                    </strong></p>
-                    <p><em>Italicized Text
-                       <br>
-                       Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
-                    </em></p>
-                </div>
-            </div>
-        </div>
-        
-        <br><br>
-        
-        <!-- TABLES -->
-        <div class="row">
-            <div class="container">
-                <div class="col col-12">
-                    <h1>Tables</h1>
-                </div> 
-                <div class="bgGray col col-12">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Age</th>
-                                <th>Email</th>
-                                <th>Birth Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-label="First Name">Jill</td>
-                                <td data-label="Last Name">Smith</td>
-                                <td data-label="Age">50</td>
-                                <td data-label="Email">jill_smith@email.com</td>
-                                <td data-label="Birth Date">July 21 1966</td>
-                            </tr>
-                            <tr>
-                                <td data-label="First Name">Eve</td>
-                                <td data-label="Last Name">Jackson</td>
-                                <td data-label="Age">39</td>
-                                <td data-label="Email">EveJackson@email.com</td>
-                                <td data-label="Birth Date">March 3 1977</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        
-        <br><br>
-        
-        <!-- FORMS -->
-        <div class="row">
-            <div class="container">
-               <div class="col col-12">
-                    <h1>Forms</h1>
-                </div>
-                <div class="bgGray col col-12">
-                    <form>
-                        <div class="col col-4">
-                            <label for="button">Input type: Button</label>
-                            <input type="button" value="Input Button">
+	<!-- THE NAV -->
+	<nav class="nav">
+		<div class="grid">
+			<div class="row">
+				<div class="col col-12">
+					<div class="site-header">
+						<a href="#">Calyx</a>
+					</div>
+					<div class="menu">
+						<a href="#">link</a>
+						<a href="#">link</a>
+						<a href="#">link</a>
+						<a href="#">link</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- THE GRID -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<h1 class="example-title">The Grid</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-12 example-column">12</div>
+		</div>
+		<div class="row">
+			<div class="col col-1 example-column">1</div>
+			<div class="col col-11 example-column">11</div>
+		</div>
+		<div class="row">
+			<div class="col col-2 example-column">2</div>
+			<div class="col col-10 example-column">10</div>
+		</div>
+		<div class="row">
+			<div class="col col-3 example-column">3</div>
+			<div class="col col-9 example-column">9</div>
+		</div>
+		<div class="row">
+			<div class="col col-4 example-column">4</div>
+			<div class="col col-8 example-column">8</div>
+		</div>
+		<div class="row">
+			<div class="col col-5 example-column">5</div>
+			<div class="col col-7 example-column">7</div>
+		</div>
+		<div class="row">
+			<div class="col col-6 example-column">6</div>
+			<div class="col col-6 example-column">6</div>
+		</div>
+	</div>
+	
+	<!-- THE GRID: MARKUP -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<pre class="code-block">
+<code>
+&lt;div class="grid"&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col col-12"&gt;
+      &lt;h1&gt;The Grid&lt;/h1&gt;
+   &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col col-12 example-column"&gt;12&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="row"&gt;
+      &lt;div class="col col-1 example-column"&gt;1&lt;/div&gt;
+      &lt;div class="col col-11 example-column"&gt;11&lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code>
+				</pre>
+			</div>								
+		</div>	
+		<hr>	
+	</div>
+	
+	<!-- TYPOGRAPHY -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<h1 class="example-title">Typography</h1>
+			</div> 
+			<div class="col col-12">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h5>Heading 6</h5>
+				<p>Paragraph Text
+				   <br>
+				   Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
+				</p>
+				<p><strong>Bold Text
+				   <br>
+				   Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
+				</strong></p>
+				<p><em>Italicized Text
+				   <br>
+				   Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
+				</em></p>
+			</div>
+		</div>
+		<hr>	
+	</div>
+	
+	<!-- TABLES -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<h1 class="example-title">Tables</h1>
+			</div> 
+			<div class="col col-12">
+				<table>
+					<thead>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Age</th>
+							<th>Email</th>
+							<th>Birth Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-label="First Name">Jill</td>
+							<td data-label="Last Name">Smith</td>
+							<td data-label="Age">50</td>
+							<td data-label="Email">jill_smith@email.com</td>
+							<td data-label="Birth Date">July 21 1966</td>
+						</tr>
+						<tr>
+							<td data-label="First Name">Eve</td>
+							<td data-label="Last Name">Jackson</td>
+							<td data-label="Age">39</td>
+							<td data-label="Email">EveJackson@email.com</td>
+							<td data-label="Birth Date">March 3 1977</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<hr>	
+	</div>
+	
+	<!-- FORMS -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<h1 class="example-title">Forms</h1>
+			</div>
+			<div class="col col-12">
+				<form>
+					<div class="col col-4">
+						<label for="button">Input type: Button</label>
+						<input type="button" value="Input Button">
+					
+						<label for="reset">Input Type: Reset</label>
+						<input type="reset">
 
-                            <label for="checkbox">Input type: Checkbox</label>
-                            <input type="checkbox" value="Checkbox">
+						<label for="submit">Input Type: Submit</label>
+						<input type="submit">
+					</div>
+					
+					<div class="col col-4">
+						<label for="email">Input Type: Email</label>
+						<input type="email">
+						
+						<label for="number">Input Type: Number</label>
+						<input type="number">
 
-                            <label for="color">Input Type: Color</label>
-                            <input type="color">
+						<label for="password">Input Type: Password</label>
+						<input type="password">
 
-                            <label for="date">Input Type: Date</label>
-                            <input type="date">
+						<label for="tel">Input Type: Tel</label>
+						<input type="tel">
 
-                            <label for="email">Input Type: Email</label>
-                            <input type="email">
-                        </div>
-                        
-                        <div class="col col-4">
-                            <label for="file">Input Type: File</label>
-                            <input type="file">
+						<label for="url">Input Type: URL</label>
+						<input type="url">
+						
+						<label for="search">Input Type: Search</label>
+						<input type="search">
+					</div>
+					
+					<div class="col col-4">
+					 <label for="file">Input Type: File</label>
+						<input type="file">
+						
+						<label for="radio">Input Type: Radio</label>
+						<input type="radio">
 
-                            <label for="number">Input Type: Number</label>
-                            <input type="number">
+						<label for="range">Input Type: Range</label>
+						<input type="range">
+						
+						<label for="checkbox">Input type: Checkbox</label>
+						<input type="checkbox" value="Checkbox">
 
-                            <label for="password">Input Type: Password</label>
-                            <input type="password">
+						<label for="color">Input Type: Color</label>
+						<input type="color">
 
-                            <label for="radio">Input Type: Radio</label>
-                            <input type="radio">
-
-                            <label for="range">Input Type: Range</label>
-                            <input type="range">
-                        </div>
-                        
-                        <div class="col col-4">
-                            <label for="reset">Input Type: Reset</label>
-                            <input type="reset">
-
-                            <label for="search">Input Type: Search</label>
-                            <input type="search">
-
-                            <label for="submit">Input Type: Submit</label>
-                            <input type="submit">
-
-                            <label for="tel">Input Type: Tel</label>
-                            <input type="tel">
-
-                            <label for="url">Input Type: URL</label>
-                            <input type="url">
-                        </div>
-                    </form>
-                </div>            
-            </div>
-        </div>      
-        
-        
-    </body>
+						<label for="date">Input Type: Date</label>
+						<input type="date">
+						
+					</div>
+				</form>
+			</div>            
+		</div>
+	</div>      
+</body>
 </html>
