@@ -1,5 +1,5 @@
-/*  ** @version 0.0.5    **
-	** @date 2016-16-05  ** */
+/*  ** @version 0.0.6    **
+	** @date 2016-22-05  ** */
 	
 /*  *********************
     **  NORMALIZE CSS  **
@@ -7,15 +7,44 @@
 
 html {
   box-sizing: border-box;
+  font-size:15px; 
+  line-height: 1.6;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body {
+	font-weight:100;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
 }
 
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2.25em;
+}
+
+h3 {
+	font-size: 2.0em;
+}
+
+h4 {
+	font-size: 1.75em;
+}
+
+h5 {
+	font-size: 1.5em;
+}
+
+h6 {
+	font-size: 1.0em;
+}
 a {
 	color: #0288D1;
 }
@@ -268,17 +297,28 @@ td {
 
 body {
     font-family: 'Titillium Web', sans-serif;
-	background-color:#f6f6f6;
 	margin-bottom:60px;
 	color:#37474F;
 }
 
 .card {
-    background: #fff;
-    border: 1px solid #d3d3d3;
+    background: #eee;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px 15px;
     min-height: 30px;
 	color:#37474F;
-	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.code-container {
+	overflow:auto;
+	font-size:12px;
+	padding:10px 30px;
+	border:1px solid #eee;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+
+.code-block {
+	white-space: pre;
 }
