@@ -1,4 +1,4 @@
-/*  ** @version 0.0.9    **
+/*  ** @version 0.1.0    **
 	** @date 2016-22-05  ** 
 
 	INDEX:
@@ -112,7 +112,8 @@ input[type=button], input[type=submit], input[type=reset]{
 	outline: 0;
 	border: none;
 	background: #eee;
-	min-height: 35px; 
+	min-height: 35px;
+	cursor: pointer;
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
@@ -145,6 +146,12 @@ td {
 th {
 	text-align: left;
 	padding: 3px 0px 10px 0px;
+}
+
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 
@@ -315,6 +322,7 @@ th {
 /*  ***********************
     **  UTILITY CLASSES  **
     ***********************  */
+
 .col-centered { 
 	margin:auto;
 	float:none;
@@ -425,6 +433,7 @@ ul.nav-menu ul li{
 /*  ***********************
     **  TEMPLATE STYLES  **
     ***********************  */
+
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
 body {
