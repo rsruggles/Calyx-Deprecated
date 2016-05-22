@@ -15,11 +15,19 @@
 					<div class="site-header">
 						<a href="#">Calyx</a>
 					</div>
-					<div class="menu">
-						<a href="#">link</a>
-						<a href="#">link</a>
-						<a href="#">link</a>
-						<a href="#">link</a>
+					<ul class="nav-menu">
+						<li><a href="#">link</a></li>
+						<li><a href="#">link</a></li>
+						<li><a href="#">link</a></li>
+						<li><a href="#">Components</a>
+							<ul>
+								<li><a href="#grid">The Grid</a></li>
+								<li><a href="#typography">Typography</a></li>
+								<li><a href="#navigation">Navigation</a></li>
+								<li><a href="#tables">Tables</a></li>
+								<li><a href="#forms">Forms</a></li>
+							</ul>
+						</li>
 					</div>
 				</div>
 			</div>
@@ -27,6 +35,7 @@
 	</nav>
 	
 	<!-- THE GRID -->
+	<a class="anchor" name="grid"></a>
 	<div class="grid">
 		<div class="row">
 			<div class="col col-12">
@@ -89,6 +98,7 @@
 	</div>
 	
 	<!-- TYPOGRAPHY -->
+	<a class="anchor" name="typography"></a>
 	<div class="grid">
 		<div class="row">
 			<div class="col col-12">
@@ -118,7 +128,81 @@
 		<hr>	
 	</div>
 	
+	<!-- NAVIGATION -->
+	<a class="anchor" name="navigation"></a>
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<h1 class="example-title">Navigation</h1>
+			</div> 
+		</div>
+		<div class="row">
+			<div class="col col-12">
+				<nav class="nav example-nav">
+					<div class="grid">
+						<div class="row"> 
+							<div class="col col-12">
+								<div class="site-header">
+									<a href="#">Calyx</a>
+								</div>
+								<ul class="nav-menu">
+									<li><a href="#">link</a></li>
+									<li><a href="#">link</a></li>
+									<li><a href="#">link</a></li>
+									<li><a href="#">link</a>
+										<ul>
+											<li><a href="#">link</a></li>
+											<li><a href="#">link</a></li>
+											<li><a href="#">link</a></li>
+											<li><a href="#">link</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	
+	<!-- THE NAVIGATION: MARKUP -->
+	<div class="grid">
+		<div class="row">
+			<div class="col col-12">
+				<pre class="code-block">
+<code>
+&lt;nav class="nav example-nav"&gt;
+   &lt;div class="grid"&gt;
+      &lt;div class="row"&gt; 
+         &lt;div class="col col-12"&gt;
+            &lt;div class="site-header"&gt;
+               &lt;a href="#"&gt;Calyx&lt;/a&gt;
+            &lt;/div&gt;
+           &lt;ul class="nav-menu"&gt;
+              &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;
+                 &lt;ul&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;link&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+              &lt;/li&gt;
+           &lt;/ul&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/nav&gt;</code>
+				</pre>
+			</div>								
+		</div>	
+		<hr>	
+	</div>
 	<!-- TABLES -->
+	<a class="anchor" name="tables"></a>
 	<div class="grid">
 		<div class="row">
 			<div class="col col-12">
@@ -158,6 +242,7 @@
 	</div>
 	
 	<!-- FORMS -->
+	<a class="anchor" name="forms"></a>
 	<div class="grid">
 		<div class="row">
 			<div class="col col-12">
@@ -167,7 +252,7 @@
 				<form>
 					<div class="col col-4">
 						<label for="button">Input type: Button</label>
-						<input type="button" value="Input Button">
+						<input type="button" class="button-default" value="Input Button">
 					
 						<label for="reset">Input Type: Reset</label>
 						<input type="reset">
@@ -175,7 +260,6 @@
 						<label for="submit">Input Type: Submit</label>
 						<input type="submit">
 					</div>
-					
 					<div class="col col-4">
 						<label for="email">Input Type: Email</label>
 						<input type="email">
@@ -195,7 +279,6 @@
 						<label for="search">Input Type: Search</label>
 						<input type="search">
 					</div>
-					
 					<div class="col col-4">
 					 <label for="file">Input Type: File</label>
 						<input type="file">
@@ -214,7 +297,6 @@
 
 						<label for="date">Input Type: Date</label>
 						<input type="date">
-						
 					</div>
 				</form>
 			</div>            

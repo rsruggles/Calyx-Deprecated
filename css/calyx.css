@@ -1,5 +1,16 @@
-/*  ** @version 0.0.8    **
-	** @date 2016-22-05  ** */
+/*  ** @version 0.0.9    **
+	** @date 2016-22-05  ** 
+
+	INDEX:
+	  
+	  1. Normalize CSS
+	  2. The Grid
+	  3. Screen Sizes
+	  4. Utility Classes
+	  5. Navigation
+	  6. Template Styles
+							*/
+
 	
 /*  *********************
     **  NORMALIZE CSS  **
@@ -47,6 +58,16 @@ h5 {
 h6 {
 	font-size: 1.0em;
 }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 6em 0;
+    padding: 0; 
+}
+
 a {
 	color: #0288D1;
 }
@@ -66,12 +87,12 @@ label {
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 11px;
-	color: #7e7e7e;
 	font-weight: 600;
 }
 
 input[type=search], input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=date] {
 	padding: 7px 9px;
+	min-height: 35px;
 	border: 1px solid;
 	border-color: #E0E0E0;
 	border-radius: 6px;
@@ -86,33 +107,46 @@ input[type=search]:focus, input[type=email]:focus, input[type=number]:focus, inp
 }
 
 input[type=button], input[type=submit], input[type=reset]{
-	background-color: #fff;
 	padding: 10px;
-	border-radius: 6px;
+	border-radius: 5px;
 	outline: 0;
-	border: 1px solid;
-	border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-	box-shadow: 0 1px 1px rgba(0,0,0,.05);
-	
-	-o-transition:background-color .1s ease-out, background .1s ease-in;
-	-ms-transition:background-color .1s ease-out, background .1s ease-in;
-	-moz-transition:background-color .1s ease-out, background .1s ease-in;
-	-webkit-transition:background-color .1s ease-out, background .1s ease-in;
-	transition:background-color .1s ease-out, background .1s ease-in;
+	border: none;
+	background: #eee;
+	min-height: 35px; 
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
-	background-color: #A5D6A7;
+	background: #d3d3d3;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 6em 0;
-    padding: 0; 
+input[type=range] {
+  width: 100%;
+  margin: 0;
 }
+
+strong, b {
+	font-weight: bold;
+}
+
+table {
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+	width: 100%; 
+	border-collapse: collapse;
+}
+
+td {
+	padding: 10px 0px;
+	border-collapse: collapse;
+	border-bottom: 1px solid;
+}
+
+th {
+	text-align: left;
+	padding: 3px 0px 10px 0px;
+}
+
 
 /*  ****************
     **  THE GRID  **
@@ -132,7 +166,6 @@ hr {
     position: relative;
     float: left;
     display: block;
-
 }
 
 .col + .col {
@@ -140,8 +173,7 @@ hr {
 }
 
 .col + .col-12 {
-    margin-left: 0;
-    
+    margin-left: 0;    
 }
 
 .col-1 {width: 6.86666666667%;}
@@ -158,6 +190,11 @@ hr {
 .col-12 {
     width: 100%;
     margin-left: 0;
+}
+
+.grid {
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 
@@ -205,8 +242,10 @@ hr {
     /* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
 		display: block; 
-    }    
+    }
+	
     thead tr { display: none; }
+	
     table td:before {
         content: attr(data-label);
         float: left;
@@ -214,13 +253,19 @@ hr {
         margin-right: 5px;
         text-transform: uppercase;
     }
+	
     table tr {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
+	
     table tr:last-child {
         margin-bottom: 0;
-    }
-
+    }	
+	
+	ul.nav-menu {
+		display: none;
+	}
+	
 }
 
 /* TABLETS + */
@@ -270,6 +315,11 @@ hr {
 /*  ***********************
     **  UTILITY CLASSES  **
     ***********************  */
+.col-centered { 
+	margin:auto;
+	float:none;
+}
+
 .txt-center {
     text-align: center;
 }
@@ -278,33 +328,18 @@ hr {
     text-align: left;
 }
 
-/*  *********************
-    **  TABLE STYLES  **
-    *********************  */
-table {
-    color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-	width: 100%; 
-	border-collapse: collapse;
+.inline {
+	display: inline;
 }
 
-th {
-	text-align: left;
-	padding: 3px 0px 10px 0px;
+.block {
+	display: block;
 }
 
-@media only screen and (max-width : 480px) {
-	td:first-child {
-		border:none;
-	}
+.hide {
+	display:none;
 }
 
-td {
-	padding: 10px 0px;
-	border-collapse: collapse;
-	border-top:1px solid #E0E0E0;
-}
 
 
 /*  ******************
@@ -331,26 +366,51 @@ td {
 
 .nav .site-header a {
 	color: #A5D6A7;
-	padding:10px 15px;
+	padding: 20px 25px;
 }
 
-.nav .menu {
-	padding: 15px;
+ul.nav-menu {
 	float: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	list-style-type: none;
 }
 
-.nav .menu a {
-	padding: 10px 15px;
+ul.nav-menu li {
+	 float: left;
+}
+
+ul.nav-menu li a {
+	padding: 15px 25px;
+	display: block;
+	text-align: center;
+	width:100%;
+}
+
+ul.nav-menu li:hover > ul
+{
+	display:block
+}
+
+ul.nav-menu ul
+{
+	display: none;
+	position: absolute;
+	top: 100%;
+	border: 1px solid #eee;
+	border-top: none;
+	background: #fff;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.nav-menu ul li{
+	width: 100%;
 }
 
 .nav a:hover {
-	background-color: rgba(0,0,0,0.05);
-}
-
-.nav img {
-	float: left;
-	margin-top: 7px;
-	margin-right: 5px;
+	background: rgba(0,0,0,0.05);
 }
 
 .nav h1 {
@@ -362,23 +422,9 @@ td {
 	letter-spacing: 3px;
 }
 
-.navmenu li {
-	display: inline;
-}
-
-.navmenu-right {
-	float: right;
-}
-
-.navmenu li a {
-	padding: 10px 20px;
-}
-	
-	
-
-/*  *******************
-    **  TEMP STYLES  **
-    *******************  */
+/*  ***********************
+    **  TEMPLATE STYLES  **
+    ***********************  */
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
 body {
@@ -388,27 +434,36 @@ body {
 }
 
 ::selection {
-	background-color:#cbe7cc;
+	background: #cbe7cc;
 }
 
 h1.example-title {
 	color: #A5D6A7;
 }
 
-.col-centered { 
-	margin:auto;
-	float:none;
+td {
+	border-color: #E0E0E0;
 }
 
+.anchor {
+	display:inline-block;
+	padding-top:65px;
+}
 
 .nav  a {
 	text-decoration:none;
 	color:#A5D6A7;
-	-o-transition:background-color .1s ease-out, background .1s ease-in;
-	-ms-transition:background-color .1s ease-out, background .1s ease-in;
-	-moz-transition:background-color .1s ease-out, background .1s ease-in;
-	-webkit-transition:background-color .1s ease-out, background .1s ease-in;
-	transition:background-color .1s ease-out, background .1s ease-in;
+	-o-transition:background .1s ease-out, background .1s ease-in;
+	-ms-transition:background .1s ease-out, background .1s ease-in;
+	-moz-transition:background .1s ease-out, background .1s ease-in;
+	-webkit-transition:background .1s ease-out, background .1s ease-in;
+	transition:background .1s ease-out, background .1s ease-in;
+}
+
+.example-nav {
+	position: relative;
+	z-index: 98;
+	border: 1px solid #eee;
 }
 
 .example-column {
@@ -430,11 +485,16 @@ h1.example-title {
 	border-radius: 5px;
 }
 
-.block {
-	padding: 10px 15px;
-	font-size: 1em;
-	border: 1px solid #E0E0E0;
-	overflow: auto;
-	border-radius: 5px;
+.button-default {
+	background: #CBE7CC!important;
+	
+	-o-transition:background .1s ease-out, background .1s ease-in;
+	-ms-transition:background .1s ease-out, background .1s ease-in;
+	-moz-transition:background .1s ease-out, background .1s ease-in;
+	-webkit-transition:background .1s ease-out, background .1s ease-in;
+	transition:background .1s ease-out, background .1s ease-in;
 }
 
+.button-default:hover { 
+	background: #A5D6A7!important;
+}
