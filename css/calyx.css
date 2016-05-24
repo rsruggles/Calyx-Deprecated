@@ -20,6 +20,11 @@
     **  NORMALIZE CSS  **
     *********************  */
 
+/* Force MS Edge to Recognize Pseudo Classes */
+@supports (-ms-accelerator:true) {
+  .selector { property:value; } 
+}
+
 /* Normalize HTML & Body */
 html {
     box-sizing: border-box;
@@ -298,6 +303,10 @@ textarea {
         font-weight: bold;
         margin-right: 5px;
         text-transform: uppercase;
+    }
+    
+    table td {
+        text-align: right;
     }
 	
     table tr {
