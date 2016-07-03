@@ -361,7 +361,7 @@ textarea {
     }
     
     ul.nav-menu li:hover > ul {
-        display: none;
+        position: relative;
     }
     
     ul.nav-menu ul li a {
