@@ -1,4 +1,4 @@
 /* Responsive Navigation */
-function navMobile() {
+function navToggle() {
     document.getElementsByClassName("nav-menu")[0].classList.toggle("mobile-nav");
 }

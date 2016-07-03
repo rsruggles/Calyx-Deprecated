@@ -361,7 +361,7 @@ textarea {
     }
     
     ul.nav-menu li:hover > ul {
-        position: relative;
+        display: none;
     }
     
     ul.nav-menu ul li a {
@@ -402,7 +402,7 @@ textarea {
     /* Responsive Navigation */
     ul.nav-menu li.mobile-icon {
         display: none;
-    }    
+    }
 }
 
 
