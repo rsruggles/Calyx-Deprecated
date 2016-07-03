@@ -266,7 +266,7 @@ textarea {
     ******************** */
 
 /* PHONE */
-@media only screen and (max-width : 550px) {
+@media only screen and (max-width : 680px) {
     body {
         font-size: 12px;
     }
@@ -328,35 +328,59 @@ textarea {
         margin-bottom: 0;
     }	
 	
-	ul.nav-menu {
-		display: none;
-	}
-	
-}
-
-/* TABLETS + */
-@media only screen and (min-width: 551px) {
-    body {
-        font-size: 13px;
+    
+    /* Responsive Navigation */
+    ul.nav-menu {
+        position: relative;
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+    ul.nav-menu li {display: none;}
+    ul.nav-menu li:first-child {display: inline;}
+    ul.nav-menu li:last-child {display: inline;}
+    ul.nav-menu li.mobile-icon {
+        float: right;
+    }
+        
+    ul.nav-menu.mobile-nav {position: relative;}
+    
+    ul.nav-menu.mobile-nav li.mobile-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     
-    .grid {
-        max-width: 1000px;
-        margin-left: auto; 
-        margin-right: auto;
+    ul.nav-menu.mobile-nav li {
+        float: none;
+        display: inline;
     }
     
-    .row {
-        margin-bottom: 10px;
+    ul.nav-menu.mobile-nav li a {
+        text-align: left;
     }
-
-    .row:last-child {
-        margin-bottom: 0;
+    
+    ul.nav-menu li:hover > ul {
+        display: none;
     }
+    
+    ul.nav-menu ul li a {
+        padding-left: 40px;
+    }
+    ul.nav-menu ul li a:before {
+        content: "- ";
+    }
+    
+    ul.nav-menu.mobile-nav ul {
+        border-left: none;
+        border-right: none;
+    }
+    
 }
+
 
 /* DESKTOPS */
-@media only screen and (min-width: 721px) {
+@media only screen and (min-width: 681px) {
     body {
         font-size: 15px;
     }
@@ -373,6 +397,11 @@ textarea {
 
     .row:last-child {
         margin-bottom: 0;
+    }
+    
+    /* Responsive Navigation */
+    ul.nav-menu li.mobile-icon {
+        display: none;
     }
 }
 
@@ -393,6 +422,14 @@ textarea {
 
 .txt-left {
     text-align: left;
+}
+
+.txt-right {
+    text-align: right;
+}
+
+.txt-justify {
+    text-align: justify;
 }
 
 .inline {
@@ -418,7 +455,7 @@ textarea {
 	min-height: 50px;
 	position: fixed;
 	top: 0;
-	left:0;
+	left: 0;
 	display: block;
 	background: #fff;
 	width: 100%;
@@ -426,38 +463,30 @@ textarea {
 	border-bottom: 1px solid #eee;
 	}
 
-.nav .site-header {
-	float: left;
-	padding: 15px;
-}
-
 .nav .site-header a {
 	color: #A5D6A7;
-	padding: 20px 25px;
 }
 
 ul.nav-menu {
-	float: right;
     margin: 0;
     padding: 0;
     overflow: hidden;
 	list-style-type: none;
 }
 
+
 ul.nav-menu li {
-	 float: left;
+    float: left;
 }
 
 ul.nav-menu li a {
 	padding: 15px 25px;
 	display: block;
 	text-align: center;
-	width:100%;
 }
 
-ul.nav-menu li:hover > ul
-{
-	display:block
+ul.nav-menu li:hover > ul {
+	display: block;
 }
 
 ul.nav-menu ul
