@@ -360,11 +360,7 @@ textarea {
         text-align: left;
     }
     
-    /*ul.nav-menu li:hover > ul {
-        position: relative;
-    }*/
-    
-    ul.nav-menu li:click > ul {
+    ul.nav-menu li:hover > ul {
         position: relative;
     }
     
