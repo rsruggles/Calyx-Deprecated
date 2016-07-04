@@ -21,7 +21,7 @@
 <body>
 
 	<!-- THE NAV -->
-	<nav class="nav">
+	<nav class="nav-fixed-top">
 		<div class="grid">
 			<div class="row">
 				<div class="col col-12">
@@ -56,7 +56,16 @@
 	<div class="grid txt-center">
 		<div class="row">
 			<div class="col col-12 txt-left">
-				<h1 class="example-title">The Grid</h1>
+			    <h1 class="example-title">The Grid</h1>
+				<p>
+				    The <code class="code-snippet">grid</code> class acts as a centered canvas which contains the rows. It's default width is 1000px in desktop view [Screen Sizes: section 3.2.2 in calyx.css], and is ignored in mobile view. If you'd like for the columns to span the full page width, you can exclude it entirely in your markup.
+				</p>
+				<p>
+					The <code class="code-snippet">row</code> class is a full width container for the the columns. It is required in the markup to make the columns behave properly. Like most popular responsive grids, each row can contain any arrangement of <code class="code-snippet">col col-#</code> which add up to 12.
+				</p>
+				<p>
+					The classes <code class="code-snippet">col col-1</code> through <code class="code-snippet">col col-12</code> are the basic building blocks of the mobile responsive grid which contain the individual sections of your website. By default these columns float left, so when they scale down to mobile view they will appear in the same order as the flow of your markup.
+				</p>
 			</div>
 		</div>
 		<div class="row">
@@ -119,14 +128,30 @@
 		<div class="row">
 			<div class="col col-12">
 				<h1 class="example-title">Typography</h1>
-			</div> 
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col col-8">
+				<p class="pad-right">
+				  Calyx uses the <code class="code-snippet">em</code> unit for all typography, with a base font-size of <code class="code-snippet">1em</code> defined as <code class="code-snippet">15px</code> in desktop view and <code class="code-snippet">12px</code> in mobile view.
+				</p>
+				<p class="pad-right">
+				  Heading tags all display as <code class="code-snippet">block</code> type with clear type of <code class="code-snippet">both</code> and have no left/right margins. This allows you to do some interesting things with formating within a header tag using other elements such as <code class="code-snippet"> &lt;span&gt;</code>. You know, just in case.
+				</p>
+			</div>
+			<div class="col col-4">
+				<h1><span class="pull-left">Heading 1</span><span class="pull-right">2.50em</span></h1>
+				<h2><span class="pull-left">Heading 2</span><span class="pull-right">2.25em</span></h2>
+				<h3><span class="pull-left">Heading 3</span><span class="pull-right">2.00em</span></h3>
+				<h4><span class="pull-left">Heading 4</span><span class="pull-right">1.75em</span></h4>
+				<h5><span class="pull-left">Heading 5</span><span class="pull-right">1.50em</span></h5>
+				<h6><span class="pull-left">Heading 6</span><span class="pull-right">1.25em</span></h6>
+			</div>
+		</div>
+		
+		<div class="row">
 			<div class="col col-12">
-				<h1>Heading 1</h1>
-				<h2>Heading 2</h2>
-				<h3>Heading 3</h3>
-				<h4>Heading 4</h4>
-				<h5>Heading 5</h5>
-				<h5>Heading 6</h5>
 				<p>Paragraph Text
 				   <br>
 				   Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
@@ -140,7 +165,7 @@
 				   Ugh cold-pressed yr paleo meggings fixie. Try-hard ethical thundercats small batch narwhal. 8-bit twee yuccie, craft beer pinterest swag you probably haven't heard of them health goth raw denim. 
 				</em></p>
 			</div>
-		</div>	
+		</div>
 	</div>
 	
 	<!-- NAVIGATION -->
@@ -151,29 +176,33 @@
 				<h1 class="example-title">Navigation</h1>
 			</div> 
 		</div>
-		<div class="row">
-			<div class="col col-12">
-				<ul class="nav-menu nav-right">
-				    <li class="site-header">
-					    <a href="#">Calyx</a>
-					</li>
-					<li>
-					    <a href="#">Components</a>
-						<ul>
-						    <li><a href="#grid">The Grid</a></li>
-							<li><a href="#typography">Typography</a></li>
-							<li><a href="#navigation">Navigation</a></li>
-							<li><a href="#tables">Tables</a></li>
-							<li><a href="#forms">Forms</a></li>
-						</ul>
-					</li>
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-					<li><a href="#">link</a></li>
-					<li class="mobile-icon">
-						<a href="javascript:void(0);" onclick="navToggle()">&#9776;</a>
-					</li>
-				</ul>
+	</div>
+	<div class="grid">
+	    <div class="row">
+	        <div class="col col-12">
+		        <nav class="nav-default">				
+					<ul class="nav-menu nav-right">
+					    <li class="site-header">
+					        <a href="#">Calyx</a>
+					    </li>
+						<li>
+						    <a href="#">Components</a>
+							<ul>
+								<li><a href="#">The Grid</a></li>
+								<li><a href="#">Typography</a></li>
+								<li><a href="#">Navigation</a></li>
+								<li><a href="#">Tables</a></li>
+								<li><a href="#">Forms</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+						<li class="mobile-icon">
+							<a href="javascript:void(0);" onclick="navToggle()">&#9776;</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>
@@ -212,6 +241,7 @@
 			</div>								
 		</div>	
 	</div>
+	
 	<!-- TABLES -->
 	<a class="anchor" name="tables"></a>
 	<div class="grid">

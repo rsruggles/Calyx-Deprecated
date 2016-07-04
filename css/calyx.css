@@ -85,8 +85,13 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
+    padding: 0;
     font-weight: 300;
+    display: block;
+    clear: both;
 }
+
+
 
 h1 {
     font-size: 2.5em;
@@ -109,11 +114,19 @@ h5 {
 }
 
 h6 {
-    font-size: 1.0em;
+    font-size: 1.25em;
+}
+
+p {
+    font-size: 1em;
 }
 
 strong, b {
     font-weight: bold;
+}
+
+span {
+    display: inline-block;
 }
 
 sub, sup { /* Make sure SUB and SUP don't affect line-heights */
@@ -264,6 +277,7 @@ textarea {
 .grid {
 	padding-left: 10px;
 	padding-right: 10px;
+    position: relative;
 }
 
 
@@ -344,9 +358,11 @@ textarea {
         width: 100%;
     }
     ul.nav-menu li {display: none;}
-    ul.nav-menu li:first-child {display: inline;}
-    ul.nav-menu li:last-child {display: inline;}
+    ul.nav-menu li.site-header {
+        display: inline;
+    }
     ul.nav-menu li.mobile-icon {
+        display: inline;
         float: right;
     }        
     ul.nav-menu.mobile-nav {position: relative;}    
@@ -429,7 +445,7 @@ textarea {
     **  NAVIGATION  **
     **************** */
 
-.nav {
+.nav-fixed-top {
 	margin: none;
 	min-height: 50px;
 	position: fixed;
@@ -440,6 +456,14 @@ textarea {
 	width: 100%;
 	z-index: 99;
 	border-bottom: 1px solid #eee;
+}
+
+.nav-default {
+    border: 1px solid #eee;
+	min-height: 50px;
+    position: absolute;
+	width: 100%;
+	z-index: 99;
 }
 
 .site-header a {
@@ -482,11 +506,8 @@ ul.nav-menu li:hover > ul {
 }
 
 ul.nav-menu ul li{
-	width: 100%;
-}
-
-.nav a:hover {
-	background: rgba(0,0,0,0.05);
+    clear: both;
+    width: 100%;
 }
 
 
@@ -516,6 +537,13 @@ ul.nav-menu ul li{
     text-align: justify;
 }
 
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
 .inline {
 	display: inline;
 }
@@ -526,4 +554,25 @@ ul.nav-menu ul li{
 
 .hide {
 	display:none;
+}
+
+.stout, .stout .col {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.slim, .slim .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pad-left {
+    padding-left: 15px;
+}
+.pad-right {
+    padding-right: 15px;
+}
+
+.relative {
+    position: relative;
 }
