@@ -1,81 +1,137 @@
-/*  ** @version 0.0.9    **
-	** @date 2016-22-05  ** 
+/*  ** @version 0.2.5    **
+	** @date 2016-03-07  ** 
 
 	INDEX:
 	  
 	  1. Normalize CSS
+		  1.1 HTML & Body
+		  1.2 Typography
+		  1.3 Inputs & Forms
+		  1.4 Tables
+		  1.5 Misc. Elements
 	  2. The Grid
 	  3. Screen Sizes
-	  4. Utility Classes
-	  5. Navigation
-	  6. Template Styles
+          3.1 Mobile
+            3.1.1 Typography
+            3.1.2 Grid
+            3.1.3 Navigation
+          3.2 Desktop
+            3.2.1 Typography
+            3.2.2 Grid
+            3.2.3 Navigation
+	  4. Navigation
+	  5. Utility Classes
 							*/
-
 	
 /*  *********************
     **  NORMALIZE CSS  **
     *********************  */
 
+/* Force MS Edge to Recognize Pseudo Classes */
+@supports (-ms-accelerator:true) {
+    .selector { property:value; } 
+}
+
+/* Normalize HTML & Body */
 html {
-  box-sizing: border-box;
-  line-height: 1.6;
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-	font-weight: 300;  
-	margin: 0;
-	margin-top: 70px;
+    font-weight: 300;  
+    margin: 0;
+    margin-top: 70px;
+    padding: 0;
+}
+
+/* Normalize Typography */
+a {
+    color: #0288D1;
+}
+
+a:hover {
+    color: #0277BD;
+}
+
+abbr[title] { /* Crossbrowser Abbreviations */
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+code, pre, {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+dfn {
+    font-style: italic;
+}
+
+footer {
+    clear: both;
+    float: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
-	font-weight: 300;
+    font-weight: 300;
 }
 
 h1 {
-	font-size: 2.5em;
+    font-size: 2.5em;
 }
 
 h2 {
-	font-size: 2.25em;
+    font-size: 2.25em;
 }
 
 h3 {
-	font-size: 2.0em;
+    font-size: 2.0em;
 }
 
 h4 {
-	font-size: 1.75em;
+    font-size: 1.75em;
 }
 
 h5 {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 h6 {
-	font-size: 1.0em;
+    font-size: 1.0em;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 6em 0;
-    padding: 0; 
+strong, b {
+    font-weight: bold;
 }
 
-a {
-	color: #0288D1;
+sub, sup { /* Make sure SUB and SUP don't affect line-heights */
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
-a:hover {
-	color: #0277BD;
+sub {
+    bottom: -0.25em;
 }
 
+sup {
+    top: -0.5em;
+}
+
+/* Normalize Inputs & Forms */
 input {
     display: table;
     margin-bottom: 15px;
@@ -83,11 +139,11 @@ input {
 }
 
 label {
-	padding: 5px 0;
-	display: inline-block;
-	text-transform: uppercase;
-	font-size: 11px;
-	font-weight: 600;
+    padding: 5px 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
 }
 
 input[type=search], input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=date] {
@@ -112,7 +168,8 @@ input[type=button], input[type=submit], input[type=reset]{
 	outline: 0;
 	border: none;
 	background: #eee;
-	min-height: 35px; 
+	min-height: 35px;
+	cursor: pointer;
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
@@ -120,14 +177,11 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
 }
 
 input[type=range] {
-  width: 100%;
-  margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
-strong, b {
-	font-weight: bold;
-}
-
+/* Normalize Tables */
 table {
     color: inherit;
     font-size: inherit;
@@ -137,7 +191,7 @@ table {
 }
 
 td {
-	padding: 10px 0px;
+	padding: 10px 10px 10px 0;
 	border-collapse: collapse;
 	border-bottom: 1px solid;
 }
@@ -146,6 +200,21 @@ th {
 	text-align: left;
 	padding: 3px 0px 10px 0px;
 }
+
+/* Normalize Misc. Elements */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 6em 0;
+    padding: 0; 
+}
+
+textarea {
+  overflow: auto;
+}
+
 
 
 /*  ****************
@@ -203,8 +272,8 @@ th {
     **  SCREEN SIZES  **
     ******************** */
 
-/* PHONE */
-@media only screen and (max-width : 550px) {
+/* MOBILE */
+@media only screen and (max-width : 680px) {
     body {
         font-size: 12px;
     }
@@ -253,6 +322,10 @@ th {
         margin-right: 5px;
         text-transform: uppercase;
     }
+    
+    table td {
+        text-align: right;
+    }
 	
     table tr {
         margin-bottom: 15px;
@@ -262,39 +335,60 @@ th {
         margin-bottom: 0;
     }	
 	
-	ul.nav-menu {
-		display: none;
-	}
-	
-}
-
-/* TABLETS + */
-@media only screen and (min-width: 551px) {
-    body {
-        font-size: 13px;
+    
+    /* Responsive Navigation */
+    ul.nav-menu {
+        position: relative;
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+    ul.nav-menu li {display: none;}
+    ul.nav-menu li:first-child {display: inline;}
+    ul.nav-menu li:last-child {display: inline;}
+    ul.nav-menu li.mobile-icon {
+        float: right;
+    }        
+    ul.nav-menu.mobile-nav {position: relative;}    
+    ul.nav-menu.mobile-nav li.mobile-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }    
+    ul.nav-menu.mobile-nav li {
+        float: none;
+        display: inline;
+    }    
+    ul.nav-menu.mobile-nav li a {
+        text-align: left;
+    }    
+    ul.nav-menu li ul {
+        position: relative;
+    }    
+    ul.nav-menu ul li a {
+        padding-left: 40px;
+    }
+    ul.nav-menu ul li a:before {
+        content: "- ";
+    }    
+    ul.nav-menu.mobile-nav ul {
+        border: none;
     }
     
-    .grid {
-        max-width: 1000px;
-        margin-left: auto; 
-        margin-right: auto;
-    }
-    
-    .row {
-        margin-bottom: 10px;
-    }
-
-    .row:last-child {
-        margin-bottom: 0;
+    ul.nav-menu li.site-header {
+        position: relative;        
     }
 }
 
-/* DESKTOPS */
-@media only screen and (min-width: 721px) {
+
+/* DESKTOP */
+@media only screen and (min-width: 681px) {
+    /* Desktop Typography */
     body {
         font-size: 15px;
     }
     
+    /* Desktop Grid */
     .grid {
         max-width: 1000px;
         margin-left: auto;
@@ -308,36 +402,25 @@ th {
     .row:last-child {
         margin-bottom: 0;
     }
-}
+    
+    /* Desktop Navigation */
+    ul.nav-menu li.mobile-icon {
+        display: none;
+    }
+    ul.nav-menu.nav-left {
 
-
-
-/*  ***********************
-    **  UTILITY CLASSES  **
-    ***********************  */
-.col-centered { 
-	margin:auto;
-	float:none;
-}
-
-.txt-center {
-    text-align: center;
-}
-
-.txt-left {
-    text-align: left;
-}
-
-.inline {
-	display: inline;
-}
-
-.block {
-	display: block;
-}
-
-.hide {
-	display:none;
+    }
+    ul.nav-menu.nav-left li.site-header {
+        margin-right: 30px;
+    }
+    ul.nav-menu.nav-right {    
+        float: right;
+    }
+    ul.nav-menu.nav-right li.site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }
 
 
@@ -351,51 +434,40 @@ th {
 	min-height: 50px;
 	position: fixed;
 	top: 0;
-	left:0;
+	left: 0;
 	display: block;
 	background: #fff;
 	width: 100%;
 	z-index: 99;
 	border-bottom: 1px solid #eee;
-	}
-
-.nav .site-header {
-	float: left;
-	padding: 15px;
 }
 
-.nav .site-header a {
-	color: #A5D6A7;
-	padding: 20px 25px;
+.site-header a {
+	font-size: 2em;
+	line-height: 1;
+	margin-top: -5px;
 }
 
 ul.nav-menu {
-	float: right;
     margin: 0;
     padding: 0;
     overflow: hidden;
 	list-style-type: none;
 }
 
+
 ul.nav-menu li {
-	 float: left;
+    float: left;
 }
 
 ul.nav-menu li a {
 	padding: 15px 25px;
 	display: block;
 	text-align: center;
-	width:100%;
 }
 
-ul.nav-menu li:hover > ul
-{
-	display:block
-}
-
-ul.nav-menu ul
-{
-	display: none;
+ul.nav-menu ul {
+    display: none;
 	position: absolute;
 	top: 100%;
 	border: 1px solid #eee;
@@ -403,6 +475,10 @@ ul.nav-menu ul
 	background: #fff;
 	padding: 0;
 	list-style-type: none;
+}
+
+ul.nav-menu li:hover > ul {
+    display: block;
 }
 
 ul.nav-menu ul li{
@@ -413,88 +489,41 @@ ul.nav-menu ul li{
 	background: rgba(0,0,0,0.05);
 }
 
-.nav h1 {
-	padding: 0px;
-	margin: 0px;
-	font-size: 30px;
-	color: #A5D6A7;
-	font-weight: 300;
-	letter-spacing: 3px;
-}
+
 
 /*  ***********************
-    **  TEMPLATE STYLES  **
+    **  UTILITY CLASSES  **
     ***********************  */
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
 
-body {
-    font-family: 'Titillium Web', sans-serif;
-	margin-bottom: 60px;
-	color: #37474F;
+.col-centered { 
+	margin:auto;
+	float:none;
 }
 
-::selection {
-	background: #cbe7cc;
+.txt-center {
+    text-align: center;
 }
 
-h1.example-title {
-	color: #A5D6A7;
+.txt-left {
+    text-align: left;
 }
 
-td {
-	border-color: #E0E0E0;
+.txt-right {
+    text-align: right;
 }
 
-.anchor {
-	display:inline-block;
-	padding-top:65px;
+.txt-justify {
+    text-align: justify;
 }
 
-.nav  a {
-	text-decoration:none;
-	color:#A5D6A7;
-	-o-transition:background .1s ease-out, background .1s ease-in;
-	-ms-transition:background .1s ease-out, background .1s ease-in;
-	-moz-transition:background .1s ease-out, background .1s ease-in;
-	-webkit-transition:background .1s ease-out, background .1s ease-in;
-	transition:background .1s ease-out, background .1s ease-in;
+.inline {
+	display: inline;
 }
 
-.example-nav {
-	position: relative;
-	z-index: 98;
-	border: 1px solid #eee;
+.block {
+	display: block;
 }
 
-.example-column {
-	/* Base Style */
-	background: #eee;
-    border-radius: 5px;
-    padding: 5px 15px;
-    min-height: 30px;
-	color: #37474F;
-	box-shadow: 0 1px 1px rgba(0,0,0,.1);
-	text-align: center;
-}
-
-.code-block  {
-	padding: 0px 20px;
-	font-size: 1em;
-	border: 1px solid #E0E0E0;
-	overflow: auto;
-	border-radius: 5px;
-}
-
-.button-default {
-	background: #CBE7CC!important;
-	
-	-o-transition:background .1s ease-out, background .1s ease-in;
-	-ms-transition:background .1s ease-out, background .1s ease-in;
-	-moz-transition:background .1s ease-out, background .1s ease-in;
-	-webkit-transition:background .1s ease-out, background .1s ease-in;
-	transition:background .1s ease-out, background .1s ease-in;
-}
-
-.button-default:hover { 
-	background: #A5D6A7!important;
+.hide {
+	display:none;
 }

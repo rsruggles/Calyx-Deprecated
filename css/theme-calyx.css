@@ -1,0 +1,88 @@
+
+/*  **************************
+    **  CALYX THEME STYLES  **
+    **************************  */
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,700,900);
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+	margin-bottom: 60px;
+	color: #37474F;
+}
+
+::selection {
+	background: #cbe7cc;
+}
+
+footer {
+    color: #A5D6A7;
+    border-top: 1px solid #eee;
+    padding-top: 3px;
+}
+
+h1.example-title {
+	color: #A5D6A7;
+}
+
+td {
+	border-color: #E0E0E0;
+}
+
+.anchor {
+	display:inline-block;
+	padding-top:65px;
+}
+
+.nav  a {
+	text-decoration:none;
+	color:#A5D6A7;
+	-o-transition:background .1s ease-out, background .1s ease-in;
+	-ms-transition:background .1s ease-out, background .1s ease-in;
+	-moz-transition:background .1s ease-out, background .1s ease-in;
+	-webkit-transition:background .1s ease-out, background .1s ease-in;
+	transition:background .1s ease-out, background .1s ease-in;
+}
+
+.site-header a {
+	color: #A5D6A7;
+}
+
+.example-nav {
+	position: relative;
+	z-index: 98;
+	border: 1px solid #eee;
+}
+
+.example-column {
+	/* Base Style */
+	background: #eee;
+    border-radius: 5px;
+    padding: 5px 15px;
+    min-height: 30px;
+	color: #37474F;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.code-block  {
+	padding: 0px 20px;
+	font-size: 1em;
+	border: 1px solid #E0E0E0;
+	overflow: auto;
+	border-radius: 5px;
+}
+
+.button-default {
+	background: #CBE7CC!important;
+	
+	-o-transition:background .1s ease-out, background .1s ease-in;
+	-ms-transition:background .1s ease-out, background .1s ease-in;
+	-moz-transition:background .1s ease-out, background .1s ease-in;
+	-webkit-transition:background .1s ease-out, background .1s ease-in;
+	transition:background .1s ease-out, background .1s ease-in;
+}
+
+.button-default:hover { 
+	background: #A5D6A7!important;
+}
