@@ -472,6 +472,11 @@ textarea {
 	margin-top: -5px;
 }
 
+ul.nav-menu li.site-header-example a{
+	padding:10px 25px 15px 25px;
+	margin:0;
+}
+
 ul.nav-menu {
     margin: 0;
     padding: 0;
