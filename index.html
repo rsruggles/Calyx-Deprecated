@@ -13,7 +13,8 @@
 	<![endif]-->
     
     <!-- Calyx Main Styles (Needs to Load After HTML5 Shiv) -->
-    <link rel="stylesheet" type="text/css" href="css/calyx.css">  
+    <link rel="stylesheet" type="text/css" href="css/calyx.css">
+    <link rel="stylesheet" type="text/css" href="css/theme-calyx.css">  
       
 </head>
 
@@ -24,23 +25,23 @@
 		<div class="grid">
 			<div class="row">
 				<div class="col col-12">
-					<ul class="nav-menu">
+					<ul class="nav-menu nav-right">
 					    <li class="site-header">
 					        <a href="#">Calyx</a>
 					    </li>
-						<li><a href="#">link</a></li>
-						<li><a href="#">link</a></li>
-						<li><a href="#">link</a></li>
 						<li>
-						    <a href="#">Components</a>
+						    <a class="dropdown-btn" onclick="dropdownToggle()" >Components</a>
 							<ul>
-								<li><a href="#grid">The Grid</a></li>
-								<li><a href="#typography">Typography</a></li>
-								<li><a href="#navigation">Navigation</a></li>
-								<li><a href="#tables">Tables</a></li>
-								<li><a href="#forms">Forms</a></li>
+								<li class="dropdown"><a href="#grid">The Grid</a></li>
+								<li class="dropdown"><a href="#typography">Typography</a></li>
+								<li class="dropdown"><a href="#navigation">Navigation</a></li>
+								<li class="dropdown"><a href="#tables">Tables</a></li>
+								<li class="dropdown"><a href="#forms">Forms</a></li>
 							</ul>
 						</li>
+						<li><a href="#">link 1</a></li>
+						<li><a href="#">link 2</a></li>
+						<li><a href="#">link 3</a></li>
 						<li class="mobile-icon">
 							<a href="javascript:void(0);" onclick="navToggle()">&#9776;</a>
 						</li>
@@ -52,9 +53,9 @@
 	
 	<!-- THE GRID -->
 	<a class="anchor" name="grid"></a>
-	<div class="grid">
+	<div class="grid txt-center">
 		<div class="row">
-			<div class="col col-12">
+			<div class="col col-12 txt-left">
 				<h1 class="example-title">The Grid</h1>
 			</div>
 		</div>
@@ -152,30 +153,27 @@
 		</div>
 		<div class="row">
 			<div class="col col-12">
-				<nav class="nav example-nav">
-					<div class="grid">
-						<div class="row"> 
-							<div class="col col-12">
-								<div class="site-header">
-									<a href="#">Calyx</a>
-								</div>
-								<ul class="nav-menu">
-									<li><a href="#">link</a></li>
-									<li><a href="#">link</a></li>
-									<li><a href="#">link</a></li>
-									<li><a href="#">link</a>
-										<ul>
-											<li><a href="#">link</a></li>
-											<li><a href="#">link</a></li>
-											<li><a href="#">link</a></li>
-											<li><a href="#">link</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</nav>
+				<ul class="nav-menu nav-right">
+				    <li class="site-header">
+					    <a href="#">Calyx</a>
+					</li>
+					<li>
+					    <a href="#">Components</a>
+						<ul>
+						    <li><a href="#grid">The Grid</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#navigation">Navigation</a></li>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#forms">Forms</a></li>
+						</ul>
+					</li>
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
+					<li><a href="#">link</a></li>
+					<li class="mobile-icon">
+						<a href="javascript:void(0);" onclick="navToggle()">&#9776;</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
