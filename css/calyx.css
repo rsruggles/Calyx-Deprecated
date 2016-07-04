@@ -1,4 +1,4 @@
-/*  ** @version 0.2.4    **
+/*  ** @version 0.2.5    **
 	** @date 2016-03-07  ** 
 
 	INDEX:
@@ -378,9 +378,6 @@ textarea {
     ul.nav-menu li.site-header {
         position: relative;        
     }
-    .dropdown-show {
-        display: block;
-    }
 }
 
 
@@ -423,9 +420,6 @@ textarea {
         position: absolute;
         top: 0;
         left: 0;
-    }    
-    ul.nav-menu li:hover > ul {
-	    display: block;
     }
 }
 
@@ -446,6 +440,12 @@ textarea {
 	width: 100%;
 	z-index: 99;
 	border-bottom: 1px solid #eee;
+}
+
+.site-header a {
+	font-size: 2em;
+	line-height: 1;
+	margin-top: -5px;
 }
 
 ul.nav-menu {
@@ -477,8 +477,11 @@ ul.nav-menu ul {
 	list-style-type: none;
 }
 
-ul.nav-menu ul li {
+ul.nav-menu li:hover > ul {
     display: block;
+}
+
+ul.nav-menu ul li{
 	width: 100%;
 }
 
