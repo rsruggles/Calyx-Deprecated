@@ -25,7 +25,7 @@
 		<div class="grid">
 			<div class="row">
 				<div class="col col-12">
-					<ul class="nav-menu nav-right">
+					<ul class="nav-menu nav-right" id="nav-menu-toggle">
 					    <li class="site-header">
 					        <a href="#">Calyx</a>
 					    </li>
@@ -180,29 +180,31 @@
 	<div class="grid">
 	    <div class="row">
 	        <div class="col col-12">
-		        <nav class="nav-default">				
-					<ul class="nav-menu nav-right">
-					    <li class="site-header">
-					        <a href="#">Calyx</a>
-					    </li>
-						<li>
-						    <a href="#">Components</a>
-							<ul>
-								<li><a href="#">The Grid</a></li>
-								<li><a href="#">Typography</a></li>
-								<li><a href="#">Navigation</a></li>
-								<li><a href="#">Tables</a></li>
-								<li><a href="#">Forms</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
-						<li class="mobile-icon">
-							<a href="javascript:void(0);" onclick="navToggle()">&#9776;</a>
-						</li>
-					</ul>
-				</nav>
+				<div class="nav-example-container">
+					<nav class="nav-default">				
+						<ul class="nav-menu nav-right nav-menu-example">
+							<li class="site-header site-header-example">
+								<a href="#">Calyx</a>
+							</li>
+							<li>
+								<a href="#">Components</a>
+								<ul>
+									<li><a href="#">The Grid</a></li>
+									<li><a href="#">Typography</a></li>
+									<li><a href="#">Navigation</a></li>
+									<li><a href="#">Tables</a></li>
+									<li><a href="#">Forms</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+							<li class="mobile-icon">
+								<a href="javascript:void(0);" onclick="navExampleToggle()">&#9776;</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
 	</div>
