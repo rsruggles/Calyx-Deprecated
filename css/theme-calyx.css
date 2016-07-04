@@ -34,7 +34,7 @@ td {
 	padding-top:65px;
 }
 
-.nav  a {
+nav  a {
 	text-decoration:none;
 	color:#A5D6A7;
 	-o-transition:background .1s ease-out, background .1s ease-in;
@@ -42,6 +42,11 @@ td {
 	-moz-transition:background .1s ease-out, background .1s ease-in;
 	-webkit-transition:background .1s ease-out, background .1s ease-in;
 	transition:background .1s ease-out, background .1s ease-in;
+}
+
+nav a:hover {
+	background: rgba(0,0,0,0.05);
+	color:#A5D6A7;
 }
 
 .site-header a {
@@ -71,6 +76,14 @@ td {
 	border: 1px solid #E0E0E0;
 	overflow: auto;
 	border-radius: 5px;
+}
+
+.code-snippet {
+	border: 1px solid #E0E0E0;
+	border-radius: 3px;
+	font-size: .9em;
+	margin: 0 5px;
+	padding: 0 5px;
 }
 
 .button-default {
