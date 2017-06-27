@@ -159,7 +159,7 @@ label {
     font-weight: 600;
 }
 
-input[type=search], input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=date] {
+input[type=search], input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=date], input[type=text], textarea {
 	padding: 7px 9px;
 	min-height: 35px;
 	border: 1px solid;
@@ -170,7 +170,7 @@ input[type=search], input[type=email], input[type=number], input[type=password],
 	transition: border-color 0.3s ease-in-out;
 }
 
-input[type=search]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=url]:focus, input[type=date]:focus {
+input[type=search]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=url]:focus, input[type=date]:focus, input[type=text]:focus, textarea:focus {
 	box-shadow: 0px 0px 3px #E1F5FE , inset 0px 0px 3px #B3E5FC;
 	border-color: #81D4FA;
 }
